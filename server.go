@@ -12,7 +12,6 @@ import (
 	_ "modernc.org/sqlite"
 )
 
-// AwesomeAPIResponse representa a resposta completa da API de câmbio
 type AwesomeAPIResponse struct {
 	USDBRL struct {
 		Code       string `json:"code"`
@@ -29,7 +28,6 @@ type AwesomeAPIResponse struct {
 	} `json:"USDBRL"`
 }
 
-// CotacaoResponse é o JSON devolvido ao client
 type CotacaoResponse struct {
 	Bid string `json:"bid"`
 }
@@ -37,7 +35,6 @@ type CotacaoResponse struct {
 var db *sql.DB
 
 func main() {
-	// Permite configurar o caminho do banco via variável de ambiente (útil no Docker)
 	dbPath := os.Getenv("DB_PATH")
 	if dbPath == "" {
 		dbPath = "./cotacoes.db"

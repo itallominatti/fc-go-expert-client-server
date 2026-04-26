@@ -8,10 +8,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      # Volume nomeado → o arquivo cotacoes.db sobrevive a restarts e remoção do container
       - cotacoes-data:/app/data
     environment:
-      # O server.go lê esta variável para saber onde abrir o SQLite
       - DB_PATH=/app/data/cotacoes.db
     restart: unless-stopped
 
