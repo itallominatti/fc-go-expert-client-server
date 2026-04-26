@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Server",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/server.go",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "DB_PATH": "./cotacoes.db"
+      },
+      "args": []
+    },
+    {
+      "name": "Debug Client",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/client.go",
+      "cwd": "${workspaceFolder}",
+      "env": {},
+      "args": []
+    }
+  ]
+}
